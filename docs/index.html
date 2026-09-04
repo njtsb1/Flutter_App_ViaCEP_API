@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CEP Finder</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body class="theme-dark">
+  <header class="app-header" role="banner">
+    <div class="header-inner">
+      <h1 id="app-title">CEP Finder</h1>
+
+      <div class="controls" role="group" aria-label="Controls">
+        <label for="lang-select" class="visually-hidden">Language</label>
+        <select id="lang-select" aria-label="Language selector">
+          <option value="en">English (EN-US)</option>
+          <option value="pt-BR">Português (PT-BR)</option>
+          <option value="es">Español (ES)</option>
+        </select>
+
+        <button id="theme-toggle" aria-pressed="true" aria-label="Toggle dark mode">
+          <span id="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section aria-labelledby="search-heading" class="search-section">
+      <h2 id="search-heading">Find CEP</h2>
+
+      <form id="cep-form" class="cep-form" autocomplete="off" novalidate>
+        <div class="form-row">
+          <label for="cep-input" id="cep-label">CEP</label>
+          <input
+            id="cep-input"
+            name="cep"
+            inputmode="numeric"
+            pattern="\d{5}-?\d{3}"
+            placeholder="01001-000"
+            aria-labelledby="cep-label"
+            required
+          />
+        </div>
+
+        <div class="form-row actions">
+          <button type="submit" id="fetch-btn">Fetch</button>
+          <button type="button" id="save-btn" disabled>Save</button>
+          <button type="button" id="clear-btn">Clear</button>
+        </div>
+
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section aria-labelledby="result-heading" class="result-section">
+      <h2 id="result-heading">Result</h2>
+      <dl id="result-list" class="result-list" aria-live="polite"></dl>
+    </section>
+
+    <section aria-labelledby="saved-heading" class="saved-section">
+      <h2 id="saved-heading">Saved CEPs</h2>
+      <ul id="saved-list" class="saved-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-inner">
+      <small id="footer-text">Developed by Nivaldo Beirão</small>
+    </div>
+  </footer>
+
+  <script src="./src/script.js" defer></script>
+</body>
+</html>
