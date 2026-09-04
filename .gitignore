@@ -1,0 +1,43 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+.idea/
+.vscode/
+*.iml
+
+# Generated files
+**/GeneratedPluginRegistrant.*
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/engine/
+**/ios/Flutter/ephemeral/
+**/android/.gradle/
+**/android/app/*.keystore
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Secrets and local config
+.env
+.env.*.local
+secrets.json
+local.properties
+
+# Test outputs
+coverage/
+test_output/
+
+# Misc
+*.lock
+*.tmp
