@@ -1,0 +1,23 @@
+# Node / web build artifacts
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS
+Thumbs.db
+
+# Local env
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
