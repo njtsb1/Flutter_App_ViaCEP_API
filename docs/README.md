@@ -1,50 +1,46 @@
 # Creating a Flutter App from Scratch to Consume the ViaCEP API
 
-Project developed at Santander Bootcamp 2023 - Mobile with Flutter, under the guidance of specialist [Danilo Perez](https://github.com/perez-danilo "Danilo Perez").
+Project developed during the Santander Bootcamp 2023 - Mobile with Flutter, under the guidance of [Danilo Perez](https://github.com).
 
-In this challenge, you will have to build a Flutter application from scratch, putting into practice the concepts of asynchrony and API consumption.
+This project implements a ZIP code (CEP) finder application that serves as a web prototype designed to simulate and architecture the requirements of a Flutter mobile application consuming asynchronous APIs.
 
 ## Features
 
-- Fetch CEP details from ViaCEP API.
-- Display address fields (street, neighborhood, city, state, IBGE, DDD, etc.).
-- Save, edit, and delete CEP entries in `localStorage`.
-- Dark / Light theme toggle with moon/sun icons.
-- Multilanguage UI: **EN-US** (default), **PT-BR**, **ES**.
-- Accessible markup, semantic elements, and responsive layout for desktop/tablet/mobile.
+- **ViaCEP API Consumption**: Fetches real-time address details (street, neighborhood, city, state, IBGE, DDD) using asynchronous requests.
+- **Local Address Management**: Save, edit, and delete fetched CEP entries.
+- **Multi-language UI**: Support for English (EN-US), Portuguese (PT-BR), and Spanish (ES) with runtime switching.
+- **Dark / Light Mode**: Theme toggle with user preference persisted in `localStorage`.
+- **Accessibility & Responsiveness**: Semantic layout, ARIA attributes, keyboard navigation, and a fluid design optimized for mobile viewports, tablets, and desktop.
 
-## Tecnologies Used
+## Tech Stack
 
-- **Dart (Flutter)**: developing the mobile application, implementing asynchronous API calls, state management, and the user interface.
-- **AI (Assistive)**: providing contextual suggestions and accessibility improvements during development and testing.
+### Core Architecture & Logic
+- **Dart / Flutter (Concept)**: Asynchronous workflow mapping, state management logic, and API data structuring.
+- **AI Assistive Tech**: Simulated assistance for smart contextual suggestions and accessibility UX improvements.
 
-## Tecnologies Add
+### Web Interface & Mock Container
+- **HTML5**: Semantic markup, accessible controls, and ARIA integration.
+- **CSS3**: Core variables for dark/light themes, responsive layout, and focus states.
+- **JavaScript**: Core logic for the ViaCEP fetch lifecycle, i18n translation engine, and local state persistence.
 
-- **HTML**: main HTML file.
-- **CSS**: styles with dark and light theme variables.
-- **JavaScript**: application logic, translations, theme and language persistence, ViaCEP fetch, localStorage management.
+## How to Run
 
-## Usage
+1. Open `index.html` directly in any modern browser (Chrome, Firefox, Edge, Safari).
+2. Enter a Brazilian CEP (e.g., `00000-000` or `00000000`) and click **Fetch**.
+3. If the address is found, click **Save** to store it locally.
+4. Toggle language and theme preferences; they will persist for future visits.
 
-1. Open `index.html` in a modern browser (Chrome, Firefox, Edge, Safari).
-2. Enter a CEP (format `00000-000` or `00000000`) and click **Fetch**.
-3. If the CEP is found, click **Save** to store it locally.
-4. Use the language selector to switch UI language.
-5. Toggle theme with the moon/sun button. Preference is saved.
+## Data Persistence & Notes
 
-![CEP Finder](assets/CEP_Finder.png)
+- **Storage**: Saved CEPs are stored locally in the browser's `localStorage` for demo convenience and are not synchronized with an external server database.
+- **API Limits**: ViaCEP is a free, public API. It is used here directly via client-side requests for learning and local prototyping purposes.
 
-## Accessibility & Responsiveness
+## Accessibility Details
 
-- Uses semantic HTML (`header`, `main`, `section`, `footer`).
-- Buttons and inputs include ARIA attributes where appropriate.
-- `aria-live` regions announce status and results to assistive technologies.
-- Layout adapts to small screens and larger viewports.
+- Built using semantic tags (`header`, `main`, `section`, `footer`) for proper screen reader indexing.
+- Interactive controls feature visible focus outlines.
+- `aria-live` regions announce API status changes and search results dynamically to assistive technologies.
 
-## Notes
-
-- This is a lightweight demo intended for local use and learning.
-- Saved CEPs are stored in the browser `localStorage` and are not synced to a server.
-- ViaCEP is a public API; use responsibly and consider rate limits for heavy usage.
+![CEP Finder Preview](assets/CEP_Finder.png)
 
 [LICENSE](./LICENSE)
